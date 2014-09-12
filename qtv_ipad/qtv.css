@@ -1,0 +1,829 @@
+@charset "utf-8";
+
+.ipadbutton {
+	position: absolute;
+	top: 2160px;
+	width: 960px;
+	height: 380px;
+	font-size: 100px;
+	text-align: center;
+	padding-top: 260px;
+	border:4px solid #f15a24;
+}
+#leftbutton {
+	left: 0px;
+}
+#downbutton {
+	left: 960px;
+}
+#upbutton {
+	left: 1920px;
+}
+#rightbutton {
+	left: 2880px;
+}
+
+/* general properties */
+div { 
+	color: #f15a24;
+	text-align: left;
+	font-family: Arial;
+	font-size: 50px;
+	font-weight: normal;
+}
+.cursorinvisible { 
+	cursor: none; 
+}
+
+/* backround 
+ * three different wallpapers for standby screen
+ * one wallpaper for subpage appearance
+ */
+#background {
+	/* background-image: url(images_alt/background.png); */
+	/* background-image: url(images/background_startseite_ohne_tv.png); */
+	background-color: #eaeaea;
+	background-repeat: no-repeat;
+	height: 2660px;
+	width: 3840px;
+	/* the following values are used to achieve exact 4K resolution */
+	overflow: hidden;
+	margin: 0px;
+	/* the following values are used to correct vertical "jumping" in Firefox */
+	position: absolute;
+	/* top: -20px; */ /* -10px */
+}
+/*
+#background.wallpaper1 {
+	background-image: url(images_ipad/background_startseite_ohne_tv.jpg);
+}
+#background.wallpaper2 {
+	background-image: url(images/background_startseite2.png);
+}
+#background.wallpaper3 {
+	background-image: url(images/background_startseite3.png);
+}
+#background.wallpaper4 {
+	background-image: url(images/background_startseite4.png);
+}
+#background.wallpaper5 {
+	background-image: url(images/background_startseite5.png);
+}
+#background.wallpaper6 {
+	background-image: url(images/background_startseite6.png);
+}
+#background.subpage {
+	background-image: url(images/background_unterseiten.png); 
+}
+*/
+
+/* main navigation menu (shelf) */
+#shelf {
+	position: absolute;
+	left: 0px;
+	top: 1824px; /* 0px; */
+	background-image: url(images/regal.png); /* url(images_alt/shelf.png); */
+	background-repeat: no-repeat;
+	height: 336px; /* 2160px; */
+	width: 3840px;
+	/* clip: rect(1500px,auto,auto,auto); */
+	z-index: 99;
+}
+#navigationmenu {
+	position: absolute; /* relative; */
+	height: 400px;
+	width: 3840px;
+	top: -300px /* 1580px; */
+}
+
+/* main navigation menu (common properties for all menu entries) */
+.menuentry {
+	position: absolute; /* relative; */
+	background-repeat: no-repeat;
+	height: 360px; /* 300px; */
+	/*
+	width: 360px;
+	float: left;
+	left: 600px;
+	*/
+	top: 45px; /* 50px */
+}
+
+/* main navigation menu (individual properties for each menu entry)
+ * default and focus appearance (keyboard navigation)
+ */
+#menu_tv {
+	width: 125px;
+	left: 1300px;
+	background-image: url(images/btn_tv_normal.png);
+}
+#menu_tv.menu_focus {
+	background-image: url(images/btn_tv_rollover.png);
+}
+#menu_newspaper {
+	width: 530px;
+	left: 2350px; /* 750px; */
+	background-image: url(images/btn_newspaper_normal.png);
+}
+#menu_newspaper.menu_focus {
+	background-image: url(images/btn_newspaper_rollover.png);
+}
+#menu_calendar {
+	width: 390px;
+	left: 2850px; /* 2600px; */
+	background-image: url(images/btn_calendar_normal.png);
+}
+#menu_calendar.menu_focus {
+	background-image: url(images/btn_calendar_rollover.png);
+}
+#menu_photo {
+	width: 300px;
+	left: 900px; /* 400px; */
+	background-image: url(images/btn_photo_normal.png);
+}
+#menu_photo.menu_focus {
+	background-image: url(images/btn_photo_rollover.png);
+}
+#menu_headphone {
+	width: 310px;
+	left: 3250px; /* 3000px; */
+	background-image: url(images/btn_music_normal.png);
+}
+#menu_headphone.menu_focus {
+	background-image: url(images/btn_music_rollover.png);
+}
+#menu_dvd {
+	width: 990px;
+	left: 1420px;
+	background-image: url(images/btn_vod_normal.png);
+}
+#menu_dvd.menu_focus {
+	background-image: url(images/btn_vod_rollover.png);
+}
+#menu_game {
+	width: 185px;
+	left: 650px; /* 2400px; */
+	background-image: url(images/btn_games_normal.png);
+}
+#menu_game.menu_focus {
+	background-image: url(images/btn_games_rollover.png);
+}
+
+
+/* photo navigation menu (bar) */
+#bar {
+	position: absolute;
+	left: 0px;
+	top: 1980px;
+	background-image: url(images/balken_unten.png);
+	background-repeat: no-repeat;
+	height: 180px;
+	width: 3840px;
+	z-index: 99;
+}
+#navigationsubmenu {
+	position: absolute;
+	height: 180px;
+	width: 3840px;
+	top: -25px
+}
+
+/* photo navigation menu (common properties for all menu entries) */
+.submenuentry {
+	position: absolute;
+	background-repeat: no-repeat;
+	height: 181px;
+	width: 181px;
+}
+
+/* photo navigation menu (individual properties for each menu entry) 
+ * default and focus appearance (keyboard navigation) 
+ * active and active with focus appearance (focus and blur handlers check respective condition)
+ * navigating apparance for panorama button (focus and blur handlers check condition)
+ */
+#submenu_map {
+	left: 1900px; /* 1300px; */
+	background-image: url(images/btn_showmap_normal.png);
+}
+#submenu_map.submenu_focus {
+	background-image: url(images/btn_showmap_rollover.png);
+}
+#submenu_map.submenu_active {
+	background-image: url(images/btn_showmap_selected.png);
+}
+#submenu_map.submenu_active_focus {
+	background-image: url(images/btn_showmap_rollover2.png);
+}
+#submenu_play {
+	left: 1700px; /* 1500px; */
+	background-image: url(images/btn_play_normal.png);
+}
+#submenu_play.submenu_focus {
+	background-image: url(images/btn_play_rollover.png);
+}
+#submenu_play.submenu_active {
+	background-image: url(images/btn_play_selected.png);
+}
+#submenu_play.submenu_active_focus {
+	background-image: url(images/btn_play_rollover2.png);
+}
+#submenu_toggle {
+	left: 1500px; /* 1700px; */
+	background-image: url(images/btn_toggle_normal.png);
+}
+#submenu_toggle.submenu_focus {
+	background-image: url(images/btn_toggle_rollover.png);
+}
+#submenu_sound {
+	left: 1300px; /* 1900px; */
+	background-image: url(images/btn_startsound_normal.png);
+}
+#submenu_sound.submenu_focus {
+	background-image: url(images/btn_startsound_rollover.png);
+}
+#submenu_tv {
+	left: 2100px;
+	background-image: url(images/btn_showtv_normal.png);
+}
+#submenu_tv.submenu_focus {
+	background-image: url(images/btn_showtv_rollover.png);
+}
+#submenu_tv.submenu_active {
+	background-image: url(images/btn_showtv_selected.png);
+}
+#submenu_tv.submenu_active_focus {
+	background-image: url(images/btn_showtv_rollover2.png);
+}
+#submenu_vod {
+	left: 2300px;
+	background-image: url(images/btn_showvod_normal.png);
+}
+#submenu_vod.submenu_focus {
+	background-image: url(images/btn_showvod_rollover.png);
+}
+#submenu_vod.submenu_active {
+	background-image: url(images/btn_showvod_selected.png);
+}
+#submenu_vod.submenu_active_focus {
+	background-image: url(images/btn_showvod_rollover2.png);
+}
+#submenu_panorama {
+	left: 3500px;
+	width: 278px;
+	background-image: url(images/btn_panorama_normal.png);
+}
+#submenu_panorama.submenu_focus {
+	background-image: url(images/btn_panorama_rollover.png);
+}
+#submenu_panorama.submenu_active {
+	background-image: url(images/btn_panorama_selected1.png);
+}
+#submenu_panorama.submenu_active_focus {
+	background-image: url(images/btn_panorama_rollover21.png);
+}
+#submenu_panorama.submenu_navigating {
+	background-image: url(images/btn_panorama_rollover2.png);
+}
+
+/* photo navigation menu (album description text) */
+#submenudescription {
+	padding-left: 120px;
+	padding-top: 65px;
+}
+
+
+/* clock (currently not used) */
+/*
+#clock {
+	position: absolute;
+	left: 1770px;
+	top: 100px;
+}
+*/
+
+
+/* picture frames (common properties for all menu entries) */
+.pictureframe {
+	position: absolute;
+	/*
+	background-image: url(images_alt/picture_frame.png);
+	background-repeat: no-repeat;
+	width: 920px;
+	height: 650px;
+	*/
+}
+.pictureframe img {
+	position: absolute;
+	/*
+	left: 80px;
+	top: 75px;
+	width: 765px;
+	height: 488px;
+	*/
+}
+
+/* picture frames (common properties for all menu entries) 
+ * default and focus appearance (keyboard navigation)
+ */
+/*
+.pictureframe_focus {margin:-10px; border-style:solid;border-width:10px;}
+.pictureframe_nofocus {border-style:none;}
+*/
+
+/* picture frames (individual properties for each menu entry) 
+ * three different positions for each picture frame
+ */
+#picture1 {
+	background-image: url(images/pic_940x322_normal.png);
+	width: 940px;
+	height: 322px;
+}
+#picture1.position1 {
+	left: 240px;
+	top: 145px;
+}
+#picture1.position2 {
+	left: 1450px;
+	top: 145px;
+}
+#picture1.position3 {
+	left: 312px;
+	top: 450px;
+}
+#picture1 img{
+	left: 70px;
+	top: 68px;
+	width: 796px;
+	height: 164px;
+}
+#picture2 {
+	background-image: url(images/pic_630x630_normal.png);
+	width: 630px;
+	height: 630px;
+}
+#picture2.position1 {
+	left: 240px;
+	top: 460px;
+}
+#picture2.position2 {
+	left: 1610px;
+	top: 460px;
+}
+#picture2.position3 {
+	left: 1378px;
+	top: 440px;
+}
+#picture2 img{
+	left: 70px;
+	top: 69px;
+	width: 480px;
+	height: 480px;
+}
+#picture3 {
+	background-image: url(images/pic_310x310_normal.png);
+	width: 310px;
+	height: 310px;
+}
+#picture3.position1 {
+	left: 870px;
+	top: 460px;
+}
+#picture3.position2 {
+	left: 1770px;
+	top: 1100px;
+}
+#picture3.position3 {
+	left: 2060px;
+	top: 440px;
+}
+#picture3 img{
+	left: 74px;
+	top: 68px;
+	width: 168px;
+	height: 165px;
+}
+
+
+/* tv (with interchangeable content) 
+ * three different positions for standby screen
+ * position for photo overlay
+ * position for fullscreen
+ */
+#tv1 {
+	position: absolute;
+	/* background-image: url(images_alt/tv_set.png); */
+	background-image: url(images/tv.png);
+	background-repeat: no-repeat;
+	width: 930px; /* 890px; */
+	height: 640px; /* 600px; */
+	z-index: 99;
+}
+#tv1.position1 {
+	top: 1020px; /* 1095px; */
+	left: 1450px;  /* 1460px; */
+}
+#tv1.position2 {
+	top: 1020px; /* 1095px; */
+	left: 230px; /* 220px; */
+}
+#tv1.position3 {
+	top: 820px;
+	left: 310px; /* 330px; */
+}
+#tv1.photooverlay {
+	top: 1250px;
+	left: 120px; /* 330px; */
+}
+#tv1.fullscreen {
+	left: 0px;
+	top: 0px;
+}
+
+/* tv interchangable content (common properties for all contents) 
+ * default and fullscreen appearance
+ */
+.tvcontent {
+	/* black color prevents that background becomes visible when clip is exchanged */
+	background-color: #000000;
+	position: absolute;
+	left: 48px; /* 55px; */
+	top: 66px; /* 54px; */
+	width: 835px; /* 780px; */
+	height: 470px; /* 439px; */
+}
+.tvcontent_fullscreen {
+	left: 0px;
+	top: 0px;
+	width: 3840px;
+	height: 2160px;
+}
+
+
+/* calendar (with weather info and world clock) */
+#calendar {
+	position: absolute;
+	left: 2700px;
+	top: 200px;
+	width: 1000px;
+	height: 400px;
+	display: table;
+	border-spacing: 5px; /*cellspacing: poor IE support for this */
+	/* ensure that the line left of the content and header appears as one */
+	border-collapse: collapse; 
+}
+
+/* calendar row (contains header and content or header and description)
+ * increased height for separator row between sections 
+ */
+.calendarrow  {
+	display: table-row;
+	width: auto;
+}
+.calendarrow.separator  {
+	height: 70px;
+}
+
+/* calendar header, content and description (left and right) */
+.calendarheader, .calendarcontent, .calendardescription {
+	float:left; /*fix for  buggy browsers*/
+	display: table-cell;
+}
+
+/* calendar header and content (left and right; above description) */
+.calendarheader, .calendarcontent {
+	font-size: 30px;
+}
+
+/* calendar header (left) */
+.calendarheader {
+	width:15%;
+	font-style: italic;
+}
+
+/* calendar content and desription (right) */
+.calendarcontent, .calendardescription  {
+	padding-left: 15px;
+	width:80%;
+	border-left:medium solid #f15a24;
+}
+
+/* calendar description (right; below content) 
+ * reduced height if description is in last row before separator row
+ */
+.calendardescription {
+	height: 110px;
+	font-weight: bold;
+}
+.calendardescription.lastrow  {
+	height: 60px;
+}
+
+/* calendar clock digits (berne and new york) */
+#berne_hours, #berne_divider, #berne_minutes, #ny_hours, #ny_divider, #ny_minutes {
+	float: left;
+	position: relative;
+	font-weight: bold;
+	width: 60px;
+}
+#berne_hours, #ny_hours {
+	text-align: right;
+}
+#berne_divider, #ny_divider {
+	width: 20px;
+	text-align: center;
+}
+
+/* calendar weather icon (positioned freely relative to calendar) */
+.weathericon {
+	position: absolute;
+	left: 3000px;
+	top: 630px;
+}
+
+
+/* music coverflow */
+#musicselection {
+	position: absolute;
+	left: 2600px;
+	top: 1200px;
+	width: 1100px;
+	height: 800px;
+}
+
+
+/* photo album and newspaper coverflow 
+ * common properties for all jcoverflip implementations 
+ */
+.ui-jcoverflip {
+	position: relative;
+}
+     
+.ui-jcoverflip--item {
+	position: absolute;
+	display: block;
+}
+ul,
+ul li {
+	margin: 0;
+	padding: 0;
+	display: block;
+	list-style-type: none;
+}	
+	
+/* photo album coverflow */
+#photoalbumselection_flip {
+	background-image: url(images/newspaper_balken.png);
+	background-repeat: no-repeat;
+	position: absolute;
+	left: 0px;
+	top: 1430px;
+	width: 3840px;
+	height: 730px;
+	overflow: hidden;
+}  
+#photoalbumflip {
+	height: 90%;
+	width: 90%;
+	margin-right:auto;
+	margin-left:auto;
+	margin-bottom: 50px;
+}
+#photoalbumflip .ui-jcoverflip--title {
+	/* title of jCoverflip implementation is hidden */
+	visibility: hidden;
+	position: absolute;
+	bottom: -70px;
+	width: 100%;
+	text-align: center;
+}
+#photoalbumflip img {
+	display: block;
+	border: 0;
+	outline: none;
+}
+
+/* photo album content preview (picture and description) */
+#photoalbumviewing {
+	position: absolute;
+	left: 100px;
+	top: 100px;
+	text-align: center;
+}
+#photoalbumviewing img {
+	width: 3640px;
+	height: 1200px;
+}
+#photoalbumdescription {
+	width: 100%;
+	text-align: center;
+	font-weight: bold;
+	padding-top: 50px;
+}
+
+/* photo slideshow */
+#slideshowviewing {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	width: 3840px;
+	height: 1980px;
+	overflow: hidden;
+}
+#slideshowviewing img {
+	/* width: 3840px; */
+	height: 1980px;
+}
+
+/* photo slideshow map overlay */
+#photomap {
+	position: absolute;
+	left: 2750px;
+	top: 100px;
+	background-image: url(images/background_vod.png);
+	background-repeat: no-repeat;
+	width: 960px;
+	height: 1751px;
+	z-index: 99;
+	overflow: hidden;
+}
+#photomap img {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	width: 960px;
+	height: 1761px;
+}
+#photomapdot {
+	position: absolute;
+	left: 100px;
+	top: 100px;
+	background-image: url(images/btn_punkt_normal.png);
+	background-repeat: no-repeat;
+	width: 71px;
+	height: 71px;
+}
+#photomapdescription {
+	width: 860px;
+	font-weight: bold;
+	padding: 50px;
+	padding-top: 100px;
+}
+
+/* photo slideshow panorama plugin (currently not used) */
+/*
+#panoramaviewing {
+	position: absolute;
+	left: -1px;
+	top: -1px;
+	width: 3840px;
+	height: 1980px;
+	overflow: hidden;
+}
+#panoramaviewing img{
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+*/
+
+
+/* newspaper coverflow */
+#newspaperselection_flip {
+	position: absolute;
+	left: 2650px;
+	top: 0px;
+	background-image: url(images/background_photo_news.png);
+	background-repeat: no-repeat;
+	width: 960px;
+	height: 1690px;
+	overflow: hidden;
+}  
+#newspaperflip {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	height: 1200px;
+	width: 960px;
+	/*
+	margin-right:auto;
+	margin-left:auto;
+	margin-bottom: 50px;
+	*/
+}
+#newspaperflip .ui-jcoverflip--title {
+	position: absolute;
+	bottom: -100px;
+	width: 100%;
+	text-align: center;
+	font-weight: bold;
+}
+#newspaperflip img {
+	display: block;
+	border: 0;
+	outline: none;
+}
+
+
+/* newspaper reading booklet */
+#newspaperviewing {
+	margin-top: 20px;
+}
+
+
+/* VoD coverflow 
+ * default and photo overlay appearance
+ */
+#vodselection_flip {
+	position: absolute;
+	background-repeat: no-repeat;
+	width: 960px;
+	z-index: 99;
+	overflow: hidden;
+	left: 2650px;
+	top: 0px;
+	background-image: url(images/background_photo_news.png);
+	height: 1690px;
+}
+#vodselection_flip.photomode {
+	left: 2750px;
+	top: 100px;
+	background-image: url(images/background_vod.png);
+	height: 1751px;
+}  
+#vodflip {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	height: 1000px;
+	width: 960px;
+	/*
+	margin-right:auto;
+	margin-left:auto;
+	margin-bottom: 50px;
+	*/
+}
+#vodflip .ui-jcoverflip--title {
+	/* visibility: hidden; */
+	position: absolute;
+	bottom: -130px;
+	width: 100%;
+	text-align: center;
+	font-weight: bold;
+}
+#vodflip img {
+	display: block;
+	border: 0;
+	outline: none;
+}
+
+/* VoD description text */
+#voddescription {
+	position: absolute;
+	top: 1100px;
+	width: 800px;
+	text-align: left;
+	font-size: 40px;
+	font-style: italic;
+	padding: 80px;
+}
+
+
+/* game */
+#game {
+	position: absolute;
+	left: 225px;
+	top: 0px;
+	background-image: url(images/background_photo_news.png);
+	background-repeat: no-repeat;
+	width: 960px;
+	height: 1690px;
+	overflow: hidden;
+}
+#tetris {
+	margin:150px auto;
+    width: 720px;
+	overflow:hidden;
+}
+#grid {
+	float:left;
+}
+#grid table, #next table {
+	border:4px solid #f15a24;
+}
+#grid td, #next td {
+    width:72px;
+	height:72px;
+	-moz-border-radius:15px;
+}
+#stats {
+	width: 100%;
+}
+#stats div {
+	margin-top: 15px;
+	font-size: 30px;
+	font-style: italic;
+	float: left;
+	position: relative;
+	width: 33%;
+	text-align: center;
+}

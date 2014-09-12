@@ -1,0 +1,8 @@
+RightHandLeftToRightSwipe	Notepad	0
+RightHandRightToLeftSwipe	Notepad	1
+RightHandUpToDownSwipe		Notepad	2
+RightHandDownToUpSwipe		Notepad	3
+RightHandForwardPush		Notepad	4
+RightHandBackPull		Notepad	5
+RightHandDiagonalUpperRight2LowerLeft	Notepad	6
+RightHandDiagonalUpperLeft2LowerRight	Notepad	7

@@ -1,0 +1,36 @@
+﻿Build started 14.11.2011 07:40:26.
+     1>Project "C:\Users\Public\Documents\Microsoft Research KinectSDK Samples\NUI\VideoWallControl\CPP\SkeletalViewer.vcxproj" on node 2 (build target(s)).
+     1>InitializeBuildStatus:
+         Creating "Release\VideoWallControl.unsuccessfulbuild" because "AlwaysCreate" was specified.
+       ClCompile:
+         All outputs are up-to-date.
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /O2 /Oi /Oy- /GL /D WIN32 /D NDEBUG /D _WINDOWS /D _UNICODE /D UNICODE /Gm- /EHsc /MT /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Yu"StdAfx.h" /Fp"Release\VideoWallControl.pch" /Fo"Release\\" /Fd"Release\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt NuiImpl.cpp
+         NuiImpl.cpp
+     1>NuiImpl.cpp(475): warning C4244: '=' : conversion from 'double' to 'LONG', possible loss of data
+     1>NuiImpl.cpp(552): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\string.h(105) : see declaration of 'strcpy'
+       ResourceCompile:
+         All outputs are up-to-date.
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Public\Documents\Microsoft Research KinectSDK Samples\NUI\VideoWallControl\CPP\Release\VideoWallControl.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib MSRKinectNUI.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Release\VideoWallControl.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Users\Public\Documents\Microsoft Research KinectSDK Samples\NUI\VideoWallControl\CPP\Release\VideoWallControl.pdb" /SUBSYSTEM:WINDOWS /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Public\Documents\Microsoft Research KinectSDK Samples\NUI\VideoWallControl\CPP\Release\VideoWallControl.lib" /MACHINE:X86 Release\VideoWallControl.res
+         Release\DrawDevice.obj
+         Release\GesturePattern.obj
+         Release\GestureRecognizer.obj
+         Release\MedianFilter.obj
+         Release\NuiImpl.obj
+         Release\VideoWallControl.obj
+         Release\stdafx.obj
+         Release\WindowGestureCommander.obj
+         Generating code
+         Finished generating code
+         SkeletalViewer.vcxproj -> C:\Users\Public\Documents\Microsoft Research KinectSDK Samples\NUI\VideoWallControl\CPP\Release\VideoWallControl.exe
+       Manifest:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:"C:\Users\Public\Documents\Microsoft Research KinectSDK Samples\NUI\VideoWallControl\CPP\Release\VideoWallControl.exe;#1" /manifest Release\VideoWallControl.exe.intermediate.manifest
+       FinalizeBuildStatus:
+         Deleting file "Release\VideoWallControl.unsuccessfulbuild".
+         Touching "Release\VideoWallControl.lastbuildstate".
+     1>Done Building Project "C:\Users\Public\Documents\Microsoft Research KinectSDK Samples\NUI\VideoWallControl\CPP\SkeletalViewer.vcxproj" (build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:05.08

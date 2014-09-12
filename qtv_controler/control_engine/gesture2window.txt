@@ -1,0 +1,8 @@
+RightHandLeftToRightSwipe	MozillaWindowClass	RightArrow
+RightHandRightToLeftSwipe	MozillaWindowClass	LeftArrow
+RightHandUpToDownSwipe		MozillaWindowClass	DownArrow
+RightHandDownToUpSwipe		MozillaWindowClass	UpArrow
+RightHandForwardPush		MozillaWindowClass	ENTER
+RightHandBackPull		MozillaWindowClass	ESC
+RightHandDiagonalUpperRight2LowerLeft	MozillaWindowClass	PageUp
+RightHandDiagonalUpperLeft2LowerRight	MozillaWindowClass	PageDown
